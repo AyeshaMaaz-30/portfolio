@@ -1,0 +1,525 @@
+/* Reset & base font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #333;
+  color: #00e5ff;
+}
+
+.contact-btn {
+  background-color: #00e5ff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #00b3cc;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  height: 100vh;
+  width: 100%;
+  padding-top: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Large background text */
+.bg-text {
+  font-size: 160px;
+  font-weight: 900;
+  color: #00eaff;
+  opacity: 0.25;
+  letter-spacing: 6px;
+  filter: blur(1.5px);
+  z-index: 1;
+  position: relative;
+}
+
+/* Glass overlay box */
+.glass-box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  padding: 50px 30px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  border-radius: 8px;
+  z-index: 2;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtitle (Code Trail) */
+.subtitle {
+  color: #0d0d0d;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 1px #00eaff;
+}
+
+/* Tagline */
+.tagline {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Experience Section */
+.portfolio-intro {
+  margin-top: 100px;
+  padding: 20px 40px;
+}
+
+.experience-heading {
+  font-size: 42px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
+.experience-heading span {
+  color: #00eaff;
+}
+
+.experience-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ccc;
+  max-width: 900px;
+  margin: 0 auto;
+}
+/*...........*/
+/* Footer */
+footer {
+  background: #0d0d0d;
+  padding: 40px 20px;
+  color: #aaa;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 60px;
+}
+.experience-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #101010, #0d0d0f); /* optional background tone */
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.experience-header h2 {
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.experience-header h2 span {
+  color: #00e7ff;
+}
+
+.experience-header p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0d0d0d;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.experience-section {
+  width: 90%;
+  max-width: 1400px;
+  margin: 100px auto;
+  position: relative;
+}
+
+/* TOP STACKED CARDS (01, 02, 03) */
+.top-stack {
+  position: relative;
+  height: 500px;
+}
+
+.exp-card {
+  position: absolute;
+  width: 300px;
+  padding: 20px;
+  background: #121212;
+  box-shadow: 0 0 20px #00f0ff80;
+  border-radius: 15px;
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.exp-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.exp-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.exp-card p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.exp-card button {
+  padding: 8px 16px;
+  border: none;
+  background: #00f0ff;
+  color: #000;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.exp-number {
+  position: absolute;
+  top: -35px;
+  left: -25px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Positioning */
+.card-01 {
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.card-02 {
+  bottom: 100px;
+  left: 200px;
+  z-index: 2;
+}
+.card-03 {
+  bottom: 200px;
+  left: 400px;
+  z-index: 1;
+}
+
+/* BOTTOM TWO CARDS (04, 05) */
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 180px;
+}
+
+.card-04,
+.card-05 {
+  width: calc(50% - 20px);
+  background: #121212;
+  box-shadow: 0 0 20px #00f0ff80;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+}
+
+.card-04 .exp-number,
+.card-05 .exp-number {
+  position: absolute;
+  top: -35px;
+  left: -25px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+}
+/* Positioning */
+.card-01 {
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.card-02 {
+  bottom: 80px;   /* Raised a bit less */
+  left: 340px;    /* Moved more right to create spacing */
+  z-index: 2;
+}
+.card-03 {
+  bottom: 160px;  /* Slightly higher */
+  left: 680px;    /* More right for spacing */
+  z-index: 1;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 280px; /* ✅ Prevents it from becoming too tall */
+  object-fit: cover;
+  border-radius: 8px;
+}
+.card-04 {
+  height: auto; /* ✅ Don't force a large height */
+  max-height: 500px; /* Optional, to keep card compact */
+}
+
+.card-05 {
+  margin-top: 80px; /* ✅ Adjust the value as needed */
+}
+.read-more-btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #00f; /* Blue text */
+  background-color: transparent;
+  border: 2px solid #00f; /* Blue border */
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover,
+.read-more-btn:active {
+  background-color: #00f; /* Solid blue background */
+  color: #fff; /* White text */
+}
+/* === Our Valuable Clients Section === */
+.clients-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.view-projects-btn {
+  background: #00e6f6;
+  color: #000;
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 40px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.clients-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.clients-title span {
+  color: #00e6f6;
+}
+
+.clients-description {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.client-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+.client-logos img {
+  max-width: 120px; /* increased from 100px */
+  height: auto;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+.client-logos img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+
+.client-logos img:hover {
+  opacity: 1;
+}
+
+/* === Contact Us Section === */
+.contact-us-section {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.contact-title span {
+  color: #00e6f6;
+}
+
+.contact-box {
+  background: linear-gradient(145deg, #101820, #1c1c24);
+  border: 1px solid #00e6f6;
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: white;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0, 230, 246, 0.3);
+}
+
+.contact-info {
+  flex: 1 1 300px;
+  text-align: left;
+}
+
+.available-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  background: #1d1d1d;
+  padding: 8px 15px;
+  border-radius: 25px;
+  width: fit-content;
+}
+
+.available-status img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.contact-info h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.social-icons i {
+  font-size: 18px;
+  margin-right: 12px;
+  color: #00e6f6;
+  cursor: pointer;
+}
+
+.contact-action {
+  flex: 1 1 250px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.contact-action button {
+  background: #00e6f6;
+  color: #000;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.contact-action button:hover {
+  background: #00d5e5;
+}
+.experience-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2); /* optional overlay */
+  z-index: -1;
+}
+
