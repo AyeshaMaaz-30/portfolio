@@ -11,52 +11,29 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="portfolio.css">
   <link rel="stylesheet" href="footer.css">
-  <link rel="stylesheet" href="header.css">
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-<div id="header-placeholder"></div>
 
-<script>
-  fetch("header.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("header-placeholder").innerHTML = data;
-
-      // Highlight active link based on current page
-      const links = document.querySelectorAll(".nav-center a");
-      const path = window.location.pathname.split("/").pop(); // e.g., index.html
-      links.forEach(link => {
-        if (link.getAttribute("href") === path) {
-          link.classList.add("active");
-        }
-      });
-    });
-</script>
-
-
- <!-- Top Portfolio Text -->
-<section class="portfolio-text-only">
-  <h1>PORTFOLIO</h1>
-</section>
-
-<!-- Glass Box Section -->
-<section class="portfolio-section">
-  <div class="portfolio-container">
-    <h1 class="portfolio-bg-text">PORTFOLIO</h1>
-
-    <div class="portfolio-glass-box">
-      <span class="portfolio-subtitle">Code Trail</span>
-      <p class="portfolio-description">
-        Showcasing Our Journey In Software Development Through <br>
-        Impactful Projects.
-      </p>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Codetrail Logo" />
     </div>
-  </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="testimonials.html">Testimonials</a>
+    </nav>
+    <a href="contact.html" class="contact-btn">Contact Us ↗</a>
+  </header>
+
+  <!-- Portfolio Hero Section -->
+ 
+<section class="portfolio-section">
+  <img src="images/pt1.png" alt="Portfolio Background" class="pt-bg" />
 </section>
-
-
 
  <section class="experience-header">
   <h2>

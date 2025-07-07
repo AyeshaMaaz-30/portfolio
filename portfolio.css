@@ -12,7 +12,63 @@ body {
   overflow-x: hidden;
 }
 
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+}
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #333;
+  color: #00e5ff;
+}
+
+.contact-btn {
+  background-color: #00e5ff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #00b3cc;
+}
 
 /* Portfolio Section */
 .portfolio-section {
@@ -170,15 +226,6 @@ body {
   z-index: 1;
   transition: transform 0.3s;
 }
-/* Hover effect for all experience cards */
-.exp-card:hover,
-.card-04:hover,
-.card-05:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px #00f0ffcc;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
 
 .exp-card img {
   width: 100%;
@@ -291,7 +338,16 @@ body {
 .card-05 {
   margin-top: 80px; /* ✅ Adjust the value as needed */
 }
-
+.read-more-btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #00f; /* Blue text */
+  background-color: transparent;
+  border: 2px solid #00f; /* Blue border */
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
 .read-more-btn:hover,
 .read-more-btn:active {
@@ -466,328 +522,4 @@ body {
   background: rgba(0,0,0,0.2); /* optional overlay */
   z-index: -1;
 }
-@media (max-width: 1024px) {
-  .top-stack {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
 
-  .exp-card {
-    position: static !important; /* Removes absolute positioning */
-    width: 90%;
-    max-width: 350px;
-  }
-
-  .bottom-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-04, .card-05 {
-    width: 90%;
-    margin-top: 40px;
-  }
-}
-
-/* ========== Portfolio Hero Section ========== */
-/* ========== Portfolio Section ========== */
-.portfolio-text-only h1 {
-  font-size: 160px;
-  font-weight: 900;
-  color: #00eaff;
-  letter-spacing: 10px;
-  text-align: center;
-  margin-top: 100px;
-}
-
-.portfolio-section {
-  position: relative;
-  background-color: #0e0e0e;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  padding: 0 20px;
-}
-
-.portfolio-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  text-align: center;
-}
-
-.portfolio-bg-text {
-  font-size: 140px;
-  font-weight: 900;
-  color: rgba(0, 0, 0, 0.25);
-  z-index: 1;
-  letter-spacing: 10px;
-  position: absolute;
-  top: 54%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  white-space: nowrap;
-}
-
-.portfolio-glass-box {
-  position: relative;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 30px 40px;
-  border-radius: 12px;
-  z-index: 2;
-  max-width: 700px;
-  margin: 0 auto;
-  box-shadow: 0 4px 60px rgba(0, 255, 255, 0.15);
-}
-
-.portfolio-subtitle {
-  display: block;
-  font-size: 16px;
-  color: #00eaff;
-  margin-bottom: 12px;
-  font-weight: 600;
-  text-shadow: 0 0 2px #00eaff;
-}
-
-.portfolio-description {
-  font-size: 20px;
-  color: #ffffff;
-  line-height: 1.6;
-  font-weight: 400;
-}
-
-/* ===== Responsive Styles ===== */
-@media (max-width: 992px) {
-  .portfolio-text-only h1 {
-    font-size: 120px;
-  }
-
-  .portfolio-bg-text {
-    font-size: 100px;
-  }
-
-  .portfolio-glass-box {
-    padding: 24px 30px;
-  }
-
-  .portfolio-description {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .portfolio-text-only h1 {
-    font-size: 80px;
-  }
-
-  .portfolio-bg-text {
-    font-size: 70px;
-  }
-
-  .portfolio-description {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .portfolio-text-only h1 {
-    font-size: 54px;
-    margin-top: 80px;
-  }
-
-  .portfolio-bg-text {
-    font-size: 48px;
-  }
-
-  .portfolio-description {
-    font-size: 15px;
-  }
-
-  .portfolio-glass-box {
-    padding: 20px 20px;
-  }
-
-  .portfolio-subtitle {
-    font-size: 14px;
-  }
-}
-/* Existing styles (no changes) */
-.portfolio-text-only h1 {
-  font-size: 160px;
-  font-weight: 900;
-  color: #00eaff;
-  letter-spacing: 10px;
-  text-align: center;
-}
-
-/* ✅ Add this media query for mobile responsiveness */
-@media (max-width: 768px) {
-  .portfolio-text-only {
-    margin-top: 80px; /* Add spacing on top */
-  }
-
-  .portfolio-text-only h1 {
-    font-size: 80px; /* Smaller font size on mobile */
-    letter-spacing: 4px;
-  }
-
-  .portfolio-bg-text {
-    font-size: 80px;
-    transform: translate(-50%, -50%);
-  }
-
-  .portfolio-glass-box {
-    padding: 20px;
-    margin: 20px;
-  }
-
-  .portfolio-description {
-    font-size: 16px;
-  }
-}
-/* ========== Portfolio Section ========== */
-.portfolio-section {
-  position: relative;
-  height: 100vh;
-  background: #000;
-  overflow: hidden;
-}
-
-/* Blurred Glowing BG Text */
-.portfolio-text-only {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.portfolio-text-only h1 {
-  font-size: 160px;
-  font-weight: 900;
-  color: #00eaff;
-  letter-spacing: 10px;
-  opacity: 0.1;
-  white-space: nowrap;
-}
-
-/* Glass Box Overlay */
-.portfolio-glass-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  padding: 30px 40px;
-  text-align: center;
-  z-index: 2;
-  max-width: 90%;
-}
-
-.portfolio-glass-box h3 {
-  color: #00eaff;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.portfolio-description {
-  color: #fff;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .portfolio-text-only h1 {
-    font-size: 70px;
-    letter-spacing: 3px;
-  }
-
-  .portfolio-glass-box {
-    padding: 20px;
-    max-width: 90%;
-  }
-
-  .portfolio-description {
-    font-size: 15px;
-  }
-}
-/* ========== Portfolio Section ========== */
-.portfolio-section {
-  position: relative;
-  height: 100vh;
-  background: #0a0a0a; /* darker than black for softer contrast */
-  overflow: hidden;
-}
-
-/* Blurred Glowing BG Text */
-.portfolio-text-only {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-}
-
-.portfolio-text-only h1 {
-  font-size: 160px;
-  font-weight: 900;
-  color: #00eaff;
-  letter-spacing: 10px;
-  opacity: 0.1;
-  white-space: nowrap;
-}
-
-/* Lighter Glass Box Overlay */
-.portfolio-glass-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.08); /* light glass effect */
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 30px 40px;
-  text-align: center;
-  z-index: 2;
-  max-width: 90%;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.portfolio-glass-box h3 {
-  color: #00eaff;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.portfolio-description {
-  color: #ffffff;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .portfolio-text-only h1 {
-    font-size: 70px;
-    letter-spacing: 3px;
-  }
-
-  .portfolio-glass-box {
-    padding: 20px;
-    max-width: 90%;
-  }
-
-  .portfolio-description {
-    font-size: 15px;
-  }
-}
