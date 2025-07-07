@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services - Code Trail Developers</title>
+  <link rel="stylesheet" href="services.css" />
+   <link rel="stylesheet" href="footer.css">
+   <link rel="stylesheet" href="header.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Highlight active link based on current page
+      const links = document.querySelectorAll(".nav-center a");
+      const path = window.location.pathname.split("/").pop(); // e.g., index.html
+      links.forEach(link => {
+        if (link.getAttribute("href") === path) {
+          link.classList.add("active");
+        }
+      });
+    });
+</script>
+
+
+  <!-- ✅ Services Section -->
+
+  <section class="services-section">
+  <img src="images/Gradients.svg" alt="Gradient Background" class="gradient-bg" />
+  
+  <h2>
+    <span class="highlight-blue">YOUR PATH TO</span><br>
+    <span class="highlight-white">DIGITAL</span>
+    <span class="highlight-blue">EXCELLENCE</span>
+  </h2>
+  <p class="description">
+    Dive into our project portfolio to see how we’ve transformed businesses with our strategic solutions, 
+    driving growth and achieving outstanding results. Dive into our project portfolio to see how we’ve transformed 
+    businesses with our strategic solutions, driving growth and achieving outstanding results.
+  </p>
+
+
+  <div class="cards-wrapper">
+    <div class="arrow left">&#8249;</div>
+
+    <!-- Card 1 -->
+    <div class="service-card">
+      <div class="icon">
+        <img src="images/service-1-3.svg" alt="Web Design Icon" />
+      </div>
+      <h3>Web Design & Development</h3>
+      <p>We build dynamic, responsive, and scalable websites using cutting-edge technologies like React.js, Node.js, and more.</p>
+      <a href="#" class="learn-btn">Learn More</a>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="service-card active">
+      <div class="icon">
+        <img src="images/service-2.svg" alt="UI/UX Design Icon" />
+      </div>
+      <h3>UI/UX Design</h3>
+      <p>User-centric design is our priority. We create intuitive interfaces using Figma and Adobe XD, ensuring accessibility, consistency, and exceptional usability.</p>
+      <a href="#" class="learn-btn">Learn More</a>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="service-card">
+      <div class="icon">
+        <img src="images/service-1-3.svg" alt="Development Icon" />
+      </div>
+      <h3>Design & Development</h3>
+      <p>We build dynamic, responsive, and scalable websites using cutting-edge technologies like React.js, Node.js, and Python.</p>
+      <a href="#" class="learn-btn">Learn More</a>
+    </div>
+
+    <div class="arrow right">&#8250;</div>
+  </div>
+</section>
+
+
+
+<!-- ✅ Consultation & How It Works Section -->
+
+<section class="consultation-section">
+  <div class="consultation-banner">
+    <div class="line-decor"></div>
+    <div class="consult-indicator">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="bar"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+    <h2 class="consult-title">
+      <span class="highlight-blue">CLAIM YOUR FREE</span><br>
+      <span class="highlight-white">CONSULTATION</span>
+      <span class="highlight-blue">NOW!</span>
+    </h2>
+    <p class="consult-description">
+      Dive into our project portfolio to see how we’ve transformed businesses with our strategic solutions,
+      driving growth and achieving outstanding results.
+    </p>
+  </div>
+
+  <div class="how-it-works">
+    <h3 class="how-title">HOW IT WORKS?</h3>
+    
+    <div class="dotted-line">
+      <div class="circle"></div>
+      <div class="dot"></div>
+      <div class="circle"></div>
+      <div class="dot"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="steps-container">
+      <div class="step">
+        <h4>FILL OUT FORMS WITH EASE</h4>
+        <p>Easily fill out forms on our website, providing us with the details we need to understand your needs.</p>
+      </div>
+      <div class="step">
+        <h4>REQUEST RECEIVED</h4>
+        <p>Receive tailored responses from our team as we promptly reach out to address your queries and offer customized solutions.</p>
+      </div>
+      <div class="step">
+        <h4>RESPONSE FROM CODE TRAIL</h4>
+        <p>Enjoy a seamless experience from form fill to response, with our user-friendly process guiding you every step of the way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--setion 3-->
+
+
+<!-- ✅ Contact Section -->
+<section class="contact-section">
+  <div class="contact-container">
+    
+    <!-- Left Info -->
+    <div class="contact-info">
+      <button class="contact-label">📩 Contact Us</button>
+      <h2><span class="blue">HAVE QUESTIONS?</span><br>WE'RE HERE TO HELP!</h2>
+      <p>Contact us today to start your journey!</p>
+
+      <div class="contact-detail">
+        <h4>Email Us</h4>
+        <p>codetraildevelopers@gmail.com</p>
+      </div>
+      <div class="contact-detail">
+        <h4>Call Us</h4>
+        <p>+1 (123) 456-7890</p>
+      </div>
+      <div class="contact-detail">
+        <h4>Location</h4>
+        <p>Manchester, England, M19 3HG, United Kingdom</p>
+      </div>
+    </div>
+
+    <!-- Right Form -->
+    <form class="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" placeholder="Enter your first name" />
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" placeholder="Enter your last name" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter your email address" />
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="Enter your phone number" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Subject</label>
+        <input type="text" placeholder="Enter the subject of your message" />
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="4" placeholder="Enter your message here"></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        Contact Us ↗
+      </button>
+
+      <p class="privacy-note">
+        We value your privacy. Your information will be kept confidential and only used to respond to your inquiry.
+      </p>
+    </form>
+  </div>
+</section>
+<!-- ✅ Footer Section -->
+<div id="footer-container"></div>
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+
+  
+</body>
+</html>

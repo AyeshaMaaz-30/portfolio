@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Testimonials - Code Trail Developers</title>
+
+  <!-- Fonts and Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="testimonial.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Highlight active link based on current page
+      const links = document.querySelectorAll(".nav-center a");
+      const path = window.location.pathname.split("/").pop(); // e.g., index.html
+      links.forEach(link => {
+        if (link.getAttribute("href") === path) {
+          link.classList.add("active");
+        }
+      });
+    });
+</script>
+
+
+
+
+  <!-- Header (can be included via JS if you're reusing header.html) -->
+  <div class="testimonials-header-section">
+    <div class="badge">CODE TRAIL DEVELOPERS</div>
+    <h1><span>WHAT OUR CLIENTS SAY</span> <br /><strong>ABOUT US</strong></h1>
+    <p class="subtext">
+      Real experiences, real success stories. See how we've helped businesses grow with our digital solutions.
+    </p>
+    <button class="cta-button">
+      Share Your Experience <span>↗</span>
+    </button>
+  </div>
+
+  <div class="feedback-heading">
+    REAL FEEDBACK FROM REAL CLIENTS
+  </div>
+
+  <!-- TESTIMONIAL CARDS  -->
+
+  <section class="testimonial-cards">
+  <div class="testimonial-card">
+    <img src="images/icon-1.png" alt="Mary Quantino" class="testimonial-img" />
+    <h3>Mary Quantino, RealTek</h3>
+    <p>
+      Working with Code Trail Developers was an amazing experience. Their design sense and problem-solving skills helped us grow our online business.
+    </p>
+    <div class="stars">★★★★★</div>
+  </div>
+
+  <div class="testimonial-card highlighted">
+    <img src="images/icon-2.png" alt="Caleb Abraham" class="testimonial-img" />
+    <h3>Caleb Abraham, StartupHub</h3>
+    <p>
+      Their development team is outstanding! They built a high-performing website that improved our conversion rates significantly.
+    </p>
+    <div class="stars">★★★★★</div>
+  </div>
+
+  <div class="testimonial-card">
+    <img src="images/icon-3.png" alt="Alex Carter" class="testimonial-img" />
+    <h3>— Alex Carter, WebSphere Solutions</h3>
+    <p>
+      From branding to UI/UX design, everything was handled professionally. Highly recommended!
+    </p>
+    <div class="stars">★★★★★</div>
+  </div>
+</section>
+
+<!-- Dot-Line-Dot Transition -->
+<div class="section-divider">
+  <img src="images/Pagination.svg" alt="Section Divider" />
+</div>
+
+<!-- next section -->
+
+<section class="success-story">
+  <div class="container">
+    <h2 class="subtitle">SUCCESS STORY ELEVATING TECHCORP’S</h2>
+    <h3 class="title">DIGITAL PRESENCE</h3>
+    <div class="profile-pic">
+      <img src="images/image.png" alt="TechCorp Founder" />
+    </div>
+    <p class="description">
+      TechCorp partnered with us to enhance their online presence and create a seamless user experience.
+      By redesigning their website with a modern interface, optimized navigation, and engaging visuals,
+      we transformed their digital identity. The result? A significant increase in user engagement,
+      reduced bounce rates, and improved brand credibility. TechCorp now enjoys a strong online presence,
+      driving more customer interactions and business growth....
+    </p>
+    <a href="#" class="read-more-btn">Read More</a>
+  </div>
+</section>
+
+  <!--  Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

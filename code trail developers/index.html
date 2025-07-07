@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Code Trail Developers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="footer.css">
+<link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Highlight active link based on current page
+      const links = document.querySelectorAll(".nav-center a");
+      const path = window.location.pathname.split("/").pop(); // e.g., index.html
+      links.forEach(link => {
+        if (link.getAttribute("href") === path) {
+          link.classList.add("active");
+        }
+      });
+    });
+</script>
+
+
+
+  <!-- ✅ Hero Section -->
+  <section class="hero">
+    <div class="tagline">CODE TRAIL DEVELOPERS</div>
+    <h1><span class="blue">YOUR VISION, OUR CODE,</span><br>INFINITE POSSIBILITIES</h1>
+    <p>At Code Trail Developers, we craft innovative digital solutions tailored to your unique needs.</p>
+    <a href="services.html" class="explore-btn">Explore Our Solutions ↗</a>
+  </section>
+
+  <!-- ✅ Services Preview -->
+   
+  <section class="services-preview">
+    <div class="label">
+      <!-- ⚙️ -->
+      <img src="images/service.svg" alt="Services" style="width: 24px; vertical-align: middle;" /> Services
+    </div>
+    <h2>YOUR PATH TO DIGITAL EXCELLENCE</h2>
+    <p class="description">
+      Dive into our project portfolio to see how we’ve transformed businesses with our strategic solutions, 
+      driving growth and achieving outstanding results.
+    </p>
+  
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="emoji">
+          <!-- 🧪 -->
+          <img src="images/index.1.svg" alt="Specialized Design Services" />
+        </div>
+        <h3>Specialized Design Services</h3>
+        <p>We offer typography, layout design, and interaction design to elevate user engagement with refined micro-interactions..</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">
+          <!-- 🛠️ -->
+          <img src="images/index.2.svg" alt="UI/UX Design" />
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>User-centric design is our priority. We create intuitive interfaces using Figma and Adobe XD, ensuring accessibility, consistency, and exceptional usability.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">
+          <!-- 📈 -->
+          <img src="images/index.3.svg" alt="Business Development & CRO" />
+        </div>
+        <h3>Business Development & CRO</h3>
+        <p>We optimize digital strategies to boost engagement, conversions, and ROI through user research, usability testing, and conversion rate optimization.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">
+          <!-- 💻 -->
+          <img src="images/index.4.svg" alt="Web Design & Development" />
+        </div>
+        <h3>Web Design & Development</h3>
+        <p>We build dynamic, responsive, and scalable websites using cutting-edge technologies like React.js, Node.js, and Python.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">
+          <!-- 🎨 -->
+          <img src="images/index.5.svg" alt="Graphic & Motion Designing" />
+        </div>
+        <h3>Graphic & Motion Designing</h3>
+        <p>From branding to animations, we create visually compelling designs using Photoshop, Illustrator, After Effects, and Blender.</p>
+      </div>
+      <div class="service-card">
+        <div class="emoji">
+          <!-- 📢 -->
+          <img src="images/index.5.svg" alt="Digital Marketing" />
+        </div>
+        <h3>Digital Marketing</h3>
+        <p>Elevate your brand’s presence across social platforms with tailored strategies and impactful campaigns.</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="why-us">
+    <div class="why-label">
+
+
+      <!--  why us section💡 -->
+
+
+      <img src="images/index.11.svg" alt="Why Us" style="width: 24px; vertical-align: middle;" /> Why Us
+    </div>
+    <h2>TRANSFORMING IDEAS INTO<br>IMPACTFUL SOLUTIONS</h2>
+    <p class="why-subtitle">
+      As a full-service technology and design company, we blend technical expertise, creative vision, and strategic
+      thinking to drive growth, enhance user experiences, and establish strong digital presences.
+    </p>
+  
+    <div class="why-features">
+      <div class="why-feature">
+        <div class="why-icon">
+          <!-- 🌐 -->
+          <img src="images/index.6.svg" alt="Comprehensive Expertise" />
+        </div>
+        <h4>Comprehensive Expertise</h4>
+        <p>End-to-end solutions tailored to your needs.</p>
+      </div>
+      <div class="why-feature">
+        <div class="why-icon">
+          <!-- 🎯 -->
+          <img src="images/index.7.svg" alt="Creativity & Functionality" />
+        </div>
+        <h4>Creativity & Functionality</h4>
+        <p>Designs that captivate while ensuring seamless interactions.</p>
+      </div>
+      <div class="why-feature">
+        <div class="why-icon">
+          <!-- 📝 -->
+          <img src="images/index.8.svg" alt="Adaptability" />
+        </div>
+        <h4>Adaptability</h4>
+        <p>We stay ahead of trends, leveraging emerging technologies.</p>
+      </div>
+      <div class="why-feature">
+        <div class="why-icon">
+          <!-- 🚀 -->
+          <img src="images/index.9.svg" alt="Client-Centric Approach" />
+        </div>
+        <h4>Client-Centric Approach</h4>
+        <p>Transparent communication and collaboration for success</p>
+      </div>
+    </div>
+  
+    <div class="why-stats">
+      <div class="stat">
+        <h3>05+</h3>
+        <p>Years of Experience</p>
+      </div>
+      <div class="stat">
+        <h3>10+</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat">
+        <h3>40+</h3>
+        <p>Project Delivery</p>
+      </div>
+      <div class="stat">
+        <h3>90%</h3>
+        <p>Client Satisfaction Rate</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="testimonials">
+    <div class="testimonials-label">
+      <!-- 🌟 -->
+      <img src="images/index.10.svg" alt="Testimonials" style="width: 24px; vertical-align: middle;" /> Testimonials
+    </div>
+    <h2>TRUSTED BY OUR CLIENTS</h2>
+    <p class="testimonials-subtext">
+      Lorem ipsum dolor sit amet consectetur. Varius posuere tortor facilisis amet felis id gravida diam.
+      Vel sit vivamus sed congue.
+    </p>
+  
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Euismod sit urna ac velit lobortis purus.
+          A feugiat in dictum sed scelerisque. Elit arcu faucibus risus nec sapien quis.
+          Posuere vel quis in in tristique fames eget dictum at.
+        </p>
+        <div class="testimonial-user">
+          <img src="images/image3.png" alt="James Axel">
+          <div>
+            <strong>James Axel <span>Tech Corp</span></strong>
+            <small>Marketing Director</small>
+          </div>
+        </div>
+      </div>
+  
+      <div class="testimonial-card">
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Euismod sit urna ac velit lobortis purus.
+          A feugiat in dictum sed scelerisque. Elit arcu faucibus risus nec sapien quis.
+          Posuere vel quis in in tristique fames eget dictum at.
+        </p>
+        <div class="testimonial-user">
+          <img src="images/image2.png" alt="Mary Quantino">
+          <div>
+            <strong>Mary Quantino <span>RetailX</span></strong>
+            <small>CEO</small>
+          </div>
+        </div>
+      </div>
+  
+      <div class="testimonial-card">
+        <p>
+          Lorem ipsum dolor sit amet consectetur. Euismod sit urna ac velit lobortis purus.
+          A feugiat in dictum sed scelerisque. Elit arcu faucibus risus nec sapien quis.
+          Posuere vel quis in in tristique fames eget dictum at.
+        </p>
+        <div class="testimonial-user">
+          <img src="images/image1.png" alt="Caleb Abraham">
+          <div>
+            <strong>Caleb Abraham <span>StartupHub</span></strong>
+            <small>Founder</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact-us">
+    <div class="contact-left">
+      <div class="contact-label">
+        <!-- 📋 -->
+        <img src="images/index.12.svg" alt="Contact Us" style="width: 24px; vertical-align: middle;" /> Contact Us
+      </div>
+      <h2>
+        HAVE <span>QUESTIONS?</span><br>
+        WE’RE HERE<br> TO <span>HELP!</span>
+      </h2>
+      <p>Contact us today to start your journey!</p>
+  
+      <div class="contact-info">
+        <div><strong>Email Us</strong></div>
+        <p>codetraildevelopers@gmail.com</p>
+  
+        <div><strong>Call Us</strong></div>
+        <p>+1 (123) 456-7890</p>
+  
+        <div><strong>Location</strong></div>
+        <p>Manchester,<br> England, M19 3HG,<br> United Kingdom</p>
+      </div>
+    </div>
+  
+    <div class="contact-right">
+      <form class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Enter your first name" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Enter your last name" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email address" />
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter your phone number" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="Enter the subject of your message" />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea rows="4" placeholder="Enter your message here"></textarea>
+        </div>
+        <button type="submit" class="contact-btn">
+          Contact Us <span>↗</span>
+        </button>
+        <p class="privacy-note">
+          We value your privacy. Your information will be kept confidential and only used to respond to your inquiry.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <div id="footer-container"></div>
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-container").innerHTML = data;
+      });
+  </script>
+
+</body>
+</html>

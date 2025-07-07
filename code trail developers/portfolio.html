@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Portfolio - Code Trail Developers</title>
+
+  <!-- Fonts and Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="header.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+
+      // Highlight active link based on current page
+      const links = document.querySelectorAll(".nav-center a");
+      const path = window.location.pathname.split("/").pop(); // e.g., index.html
+      links.forEach(link => {
+        if (link.getAttribute("href") === path) {
+          link.classList.add("active");
+        }
+      });
+    });
+</script>
+
+
+  <!-- Portfolio Hero Section -->
+ 
+<section class="portfolio-section">
+  <img src="images/pt1.png" alt="Portfolio Background" class="pt-bg" />
+</section>
+
+ <section class="experience-header">
+  <h2>
+    OUR PAST EXPERIENCE THAT <br />
+    WE DO FOR <span>CLIENT</span>
+  </h2>
+  <p>
+    Dive into our project portfolio to see how we've transformed businesses with our strategic solutions, 
+    driving growth and achieving outstanding results. Dive into our project portfolio to see how we've 
+    transformed businesses with our strategic solutions, driving growth and achieving outstanding results.
+  </p>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="experience-section">
+
+    <!-- Top Layered Stack -->
+    <div class="top-stack">
+      <div class="exp-card card-01">
+        <div class="exp-number">01</div>
+        <img src="images/p2.png" alt="Website Designing">
+        <h3>WEBSITE DESIGNING</h3>
+        <p>LOREM IPSUM DOLOR SIT AMET CONSECTETUR.</p>
+        <button>Read More</button>
+      </div>
+
+      <div class="exp-card card-02">
+        <div class="exp-number">02</div>
+        <img src="images/p1.png" alt="Website Development">
+        <h3>WEBSITE DEVELOPMENT</h3>
+        <p>LOREM IPSUM DOLOR SIT AMET CONSECTETUR.</p>
+        <button>Read More</button>
+      </div>
+
+      <div class="exp-card card-03">
+        <div class="exp-number">03</div>
+        <img src="images/p3.png" alt="Mobile Development">
+        <h3>MOBILE DEVELOPMENT</h3>
+        <p>LOREM IPSUM DOLOR SIT AMET CONSECTETUR.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+    <!-- Bottom Row -->
+    <div class="bottom-row">
+      <div class="exp-card card-04">
+        <div class="exp-number">04</div>
+        <img src="images/p4.png" alt="Website Designing">
+        <h3>WEBSITE DESIGNING</h3>
+        <p>LOREM IPSUM DOLOR SIT AMET CONSECTETUR. LOREM IPSUM DOLOR SIT AMET CONSECTETUR.</p>
+        <button>Read More</button>
+         <img src="images/g1.png" alt="bg" class="g-bg" />
+      </div>
+
+      <div class="exp-card card-05">
+        <div class="exp-number">05</div>
+        <img src="images/p5.png" alt="Mobile Application">
+        <h3>MOBILE APPLICATION</h3>
+        <p>LOREM IPSUM DOLOR SIT AMET CONSECTETUR.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Our Valuable Clients -->
+<section class="clients-section">
+  <a href="#" class="view-projects-btn">View our all projects ↗</a>
+  <h2 class="clients-title">OUR VALUABLE <span>CLIENT</span></h2>
+  <p class="clients-description">
+    LOREM IPSUM DOLOR SIT AMET CONSECTETUR. LOREM IPSUM DOLOR SIT AMET CONSECTETUR.
+    LOREM IPSUM DOLOR SIT AMET CONSECTETUR.
+  </p>
+  <div class="client-logos">
+    <img src="images/L1.png" alt="Strapi">
+    <img src="images/L2.png" alt="Cubyn">
+    <img src="images/L3.png" alt="Topo">
+    <img src="images/L4.png" alt="Superwood">
+    <img src="images/L5.png" alt="Molotov">
+    <img src="images/L6.png" alt="Bastion">
+    <img src="images/L7.png" alt="Chainlit">
+    
+    <img src="images/L8.png" alt="Goodeed">
+    <img src="images/L9.png" alt="Klaxit">
+    <img src="images/L10.png" alt="Heyteam">
+    <img src="images/L11.png" alt="Medicalib">
+    <img src="images/L12.png" alt="Brigad">
+    <img src="images/L13.png" alt="Pintie">
+    <img src="images/L14.png" alt="Appaloosa">
+
+    <img src="images/L15.png" alt="Kolleno">
+    <img src="images/L16.png" alt="Tokywoky">
+    <img src="images/L17.png" alt="Seald">
+    <img src="images/L18.png" alt="Uplaw">
+    <img src="images/L19.png" alt="Unipromo">
+    <img src="images/L20.png" alt="Sushi.io">
+    <img src="images/L21.png" alt="Watch">
+  </div>
+</section>
+
+<!-- Contact Us Section -->
+<section class="contact-us-section">
+  <h2 class="contact-title">CONTACT <span>US</span></h2>
+  <div class="contact-box">
+    <div class="contact-info">
+      <div class="available-status">
+        <img src="images/c1.png" alt="Profile">
+        <span>Available for you</span>
+      </div>
+      <h4>Drop us a line or say 👋 on social networks</h4>
+      <p>
+        Whether you're a design team in need of support or an early-stage company looking to level up your design,
+        I'd love to talk about your project 💜
+      </p>
+      <div class="social-icons">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-dribbble"></i>
+        <i class="fab fa-behance"></i>
+      </div>
+    </div>
+    <div class="contact-action">
+      <button>Let's create magic together ✦</button>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <div id="footer-container"></div>
+  <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+
+
+
+</body>
+</html>

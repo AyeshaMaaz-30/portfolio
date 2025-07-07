@@ -1,0 +1,135 @@
+/* Base header layout */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 20px 40px;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Logo section */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo-text {
+  color: #fff;
+  font-weight: 600;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+/* Center navigation */
+.nav-center {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-center a {
+  text-decoration: none;
+  color: #ccc;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-center a:hover,
+.nav-center a.active {
+  background-color: #333;
+  color: #00e5ff;
+}
+
+/* Contact Button on Right */
+.contact-wrapper {
+  display: flex;
+}
+
+.contact-btn {
+  background-color: #00e5ff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #00b3cc;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hide the checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: block;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .nav-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    text-align: center;
+    padding: 20px 0;
+    order: 3;
+  }
+
+  .nav-center a {
+    padding: 12px 0;
+    font-size: 18px;
+  }
+
+  #menu-toggle:checked ~ .nav-center {
+    display: flex;
+  }
+
+  .contact-wrapper {
+    order: 4;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .contact-btn {
+    width: 90%;
+  }
+}
+.nav-center a.active {
+  color: #00e5ff; /* or whatever highlight color you're using */
+  font-weight: bold;
+}
